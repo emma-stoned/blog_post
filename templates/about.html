@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>About Us</h1>
+      <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Our Mission</h2>
+        <p>
+          Welcome to our blog! We are passionate about sharing knowledge and
+          insights on a wide range of topics, from technology and coding to
+          personal growth and creativity. Our mission is to provide valuable
+          content that inspires, educates, and connects our readers with new
+          ideas and perspectives.
+        </p>
+      </section>
+
+      <section>
+        <h2>What We Offer</h2>
+        <p>
+          On our blog, you will find a diverse collection of articles,
+          tutorials, and resources curated by a community of enthusiastic
+          writers and contributors. Whether you're looking to learn a new skill,
+          stay updated on industry trends, or simply enjoy some
+          thought-provoking reads, we have something for everyone.
+        </p>
+      </section>
+
+      <section>
+        <h2>Meet the Team</h2>
+        <p>
+          Our blog is brought to you by a dedicated team of writers, developers,
+          and creatives who are passionate about making a positive impact
+          through content. We believe in the power of storytelling and the
+          importance of sharing knowledge to help others grow and succeed.
+        </p>
+      </section>
+
+      <section>
+        <h2>Join the Conversation</h2>
+        <p>
+          We encourage you to join the conversation by leaving comments, sharing
+          your thoughts, and connecting with us on social media. Your feedback
+          and engagement are what make our blog a vibrant and dynamic community.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

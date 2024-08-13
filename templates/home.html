@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the Home Page</h1>
+      <nav>
+        <a href="{{ url_for('about') }}">About Us</a>
+        <a href="{{ url_for('create_post') }}">Create New Post</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Blog Posts</h2>
+      {% for post in posts %}
+      <article class="post">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.content }}</p>
+        <form
+          action="{{ url_for('delete_post', post_id=post.id) }}"
+          method="POST"
+          class="delete-form"
+          onsubmit="return confirm('Are you sure you want to delete this post?');"
+        >
+          <button type="submit" class="btn-delete">Delete</button>
+        </form>
+      </article>
+      {% endfor %}
+    </main>
+  </body>
+</html>

@@ -1,0 +1,312 @@
+/* style.css */
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+header {
+  background: linear-gradient(to right, #333, #555);
+  color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+header nav {
+  margin-top: 1rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+header nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+main {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 3rem auto;
+}
+
+main h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.5rem;
+  animation: fadeInLeft 1s ease-out;
+}
+
+article {
+  background: #fff;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1.2s ease-out;
+  border-radius: 8px;
+}
+
+article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+article h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+article p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+form {
+  background: #fff;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  margin: auto;
+  max-width: 500px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  animation: fadeInRight 1s ease-out;
+}
+
+form label {
+  display: block;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #333;
+  outline: none;
+}
+
+form button {
+  padding: 0.75rem 1.5rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+  background: #555;
+  transform: translateY(-3px);
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  header {
+    padding: 1rem;
+  }
+
+  header nav {
+    display: block;
+  }
+
+  header nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  form {
+    padding: 1rem;
+  }
+}
+/* Ensure each post is positioned relative for proper button placement */
+.post {
+  position: relative;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+
+/* Style for the delete button */
+.delete-form {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.btn-delete {
+  padding: 0.5rem 1rem;
+  background: #e74c3c; /* Red color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background: #c0392b; /* Darker red */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+  body {
+    font-size: 16px; /* Adjust font size for medium to large devices */
+  }
+}
+
+@media (max-width: 992px) {
+  header nav a {
+    font-size: 1.1rem; /* Adjust font size for tablets and smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px; /* Adjust font size for tablets and smaller screens */
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav a {
+    margin: 0.5rem 0;
+    font-size: 1rem; /* Smaller font size for mobile devices */
+  }
+
+  main {
+    padding: 0.5rem;
+    margin: 0; /* Remove margins for small devices */
+  }
+
+  .post {
+    padding: 1rem;
+    margin: 0.5rem 0; /* Reduced margin for smaller devices */
+    border: 1px solid #ddd;
+    word-wrap: break-word;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better hit box visibility */
+  }
+
+  .delete-form {
+    position: relative;
+    margin-top: 1rem;
+    display: block;
+    text-align: center;
+  }
+
+  .btn-delete {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 0.9rem; /* Adjust button font size for better fit */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px; /* Further reduce font size for very small devices */
+  }
+
+  header nav a {
+    font-size: 0.9rem; /* Smaller font size for very small devices */
+  }
+
+  .post {
+    padding: 0.75rem;
+    margin: 0.5rem 0; /* Adjust margins for very small devices */
+  }
+
+  .btn-delete {
+    padding: 0.5rem;
+    font-size: 0.8rem; /* Further adjust button font size */
+  }
+}
